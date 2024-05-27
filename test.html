@@ -1,0 +1,68 @@
+<script>
+// Mendefinisikan ukuran pola
+let size = 5;
+
+// Looping untuk baris
+for (let i = 1; i <= size; i++) {
+    // Deklarasi variabel untuk menyimpan satu baris pola
+    let row = '';
+    
+    // Looping untuk kolom
+    for (let j = 1; j <= i; j++) {
+        // Menambahkan angka ke variabel row
+        row += j;
+    }
+    
+    // Mencetak satu baris pola
+    // console.log(row);
+}
+</script>
+
+<script>
+    var murid = [
+        [1, 'Vincent', 3.5],
+        [2, 'Udin', 3.0],
+        [3, 'Mamang', 2.1],
+        [4, 'Fariz', 3.9],
+        [5, 'Aliyah', 4.0],
+        [6, 'Syifa', 2.1],
+        [7, 'Cia', 3.8],
+        [8, 'Mumtaz', 1.0],
+        [9, 'Altof', 3.1],
+    ]
+
+var vincent_no      = murid[0][0] + '. '
+var vincent_nama    = murid [0][1] + ', '  
+var vincent_ipk     = 'IPK = ' + murid[0][2] + ' '
+var vincent_status  = (murid[0][2]) >= 3.0 ? 'Lulus' : 'Gagal' //ifelse versi sebaris(ternary operator)
+
+var udin_no      = murid[1][0] + '. '
+var udin_nama    = murid [1][1] + ', '  
+var udin_ipk     = 'IPK = ' + murid[1][2] + ' '
+var udin_status  = (murid[1][2]) >= 3.0 ? 'Lulus' : 'Gagal' //ifelse versi sebaris(ternary operator)
+
+var maman_no      = murid[2][0] + '. '
+var maman_nama    = murid [2][1] + ', '  
+var maman_ipk     = 'IPK = ' + murid[2][2] + ' '
+var maman_status  = (murid[2][2]) >= 3.0 ? 'Lulus' : 'Gagal' //ifelse versi sebaris(ternary operator)
+
+//nulis langsung dari array
+//document.write(murid[0][0] + '. ' + murid [0][1] + ', ' + 'IPK = ' + murid[0][2] + ' ' + (murid[0][2]) >= 3.0 ? 'Lulus' : 'Gagal' + '<br>')
+
+//nulis dengan variabel baru atau modifikasi
+//output secara manual 
+// document.write(vincent_no + vincent_nama + vincent_ipk + vincent_status + '<br>')
+// document.write(udin_no + udin_nama + udin_ipk + udin_status + '<br>')
+// document.write(maman_no + maman_nama + maman_ipk + maman_status)
+
+for (let i = 0; i < murid.length; i++) {
+    var no      = murid[i][0] + '. '
+    var nama    = murid[i][1] + ', '  
+    var ipk     = 'IPK = ' + murid[i][2] + ' '
+    var status  = (murid[i][2]) >= 3.0 ? '<span style="color:green">Lulus</span>' : '<span style="color:red">Gagal</span>'
+
+    document.write(no + nama + ipk + status + '<br>')
+}
+
+
+</script>
