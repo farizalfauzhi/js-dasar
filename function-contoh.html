@@ -1,0 +1,38 @@
+<script>
+
+    function slip_gaji(staff, periode, hariKerja, gajiPerhari, jamLembur = null) {
+        var gajian      = (gajiPerhari*hariKerja).toLocaleString('id-ID')
+        var upahLembur  = ((gajiPerhari/8)*jamLembur).toLocaleString('ID-id')
+        var bpjs        = ((gajiPerhari*hariKerja)*0.02).toLocaleString('id-ID')
+        var totalgajian = (gajian + upahLembur - bpjs).toLocaleString('id-ID')
+
+        //syntac concat tradisional
+        document.write(
+            'Slip Gaji periode '+periode+'<br>'+
+            '<hr>'+
+            "Staff : "+staff+'<br>'+
+            'Gaji: IDR '+gajian+'<br>'+
+            'Lembur: IDR '+upahLembur+'<br>'+
+            '<u>Potongan BPJS: IDR '+bpjs+'</u><br>'+
+            'Total: IDR '+totalgajian+'<br><br><br>'
+            
+        )
+
+        //SYNTAX DENGAN CONCAT MODERN
+        // document.write(
+        //     `Slip Gaji Periode ${periode}
+        //     <hr>
+        //     Staff: ${staff} <br>
+        //     Gaji: IDR ${gajian.toLocaleString('id-ID')}<br>
+        //     Lembur: IDR ${upahLembur.toLocaleString('ID-id')}<br>
+        //     Total : IDR ${totalgajian.toLocaleString('id-ID')}<br><br><br>
+        //     ` 
+        // )
+    }
+
+
+    slip_gaji('Fariz', 'Mei 2024', 20, 150000, 5)
+    slip_gaji('Aliyah', 'Mei 2024', 25, 150000)
+    slip_gaji('Hilmi', 'Mei 2024', 23, 150000, 2)
+
+</script>
