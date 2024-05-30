@@ -4,7 +4,7 @@
         var gajian      = (gajiPerhari*hariKerja).toLocaleString('id-ID')
         var upahLembur  = ((gajiPerhari/8)*jamLembur).toLocaleString('ID-id')
         var bpjs        = ((gajiPerhari*hariKerja)*0.02).toLocaleString('id-ID')
-        var totalgajian = (gajian + upahLembur - bpjs).toLocaleString('id-ID')
+        var totalgajian = (gajian + upahLembur - Number(bpjs)).toLocaleString('id-ID')
 
         //syntac concat tradisional
         document.write(

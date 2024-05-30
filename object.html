@@ -1,0 +1,52 @@
+<script>
+
+    // var mahasiswa = {
+    //     //key : value
+    //     name        : 'Fariz Alfauzhi', 
+    //     IPK         : 3.21,
+    //     statusLulus : function () { //function anonymous
+    //         if (this.IPK >= 3){
+    //             return 'Lulus'
+    //         } else {
+    //             return 'Gagal'                       
+    //         }
+    //     },
+    //     cetakRapor : function () {
+    //         console.log(
+    //             `
+    //             Rapor ${this.name}
+    //             ===================
+    //             Indeks Prestasi Kumulatif : ${this.IPK}
+    //             Status Kelulusan : ${this.statusLulus()}`
+    //         )
+            
+    //     }
+    // }
+
+    // console.log(mahasiswa.IPK)
+    // console.log(mahasiswa['IPK'])
+    // mahasiswa.cetakRapor()
+
+    var fariz = {
+        nama     : 'Fariz',
+        berat    : '75kg',
+        tinggi   : '172cm',
+        hobi     : ['Nonton', 'Makan', 'Olahraga', 'Mancing' ],
+        sebutkanHobi : function () {
+           var semuaHobi = ''
+
+           for (let i = 0; i < this.hobi.length; i++) {
+                semuaHobi = semuaHobi + (i+1) + '. ' + this.hobi[i] + '\n'           
+           }
+           console.log(
+            `Hobby ${this.name}:\n` +
+            semuaHobi
+           )
+            
+        }
+
+    }
+
+    fariz.sebutkanHobi()
+
+</script>
